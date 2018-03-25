@@ -1,0 +1,14 @@
+<div *ngIf="!userIsLogged">
+  <form novalidate #f="ngForm">
+    <label>Username
+      <input type="text" name="username" id="" ngModel  value="admin">
+    </label>
+    <label>Password
+      <input type="text" name="password" id="" ngModel value="dtapi_admin">
+    </label>
+    <input type="submit" (click)="onsubmit(f.value)">
+  </form>
+</div>
+<div *ngIf="userIsLogged">
+  <app-subject></app-subject>
+</div>
